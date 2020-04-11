@@ -1,11 +1,16 @@
 {% extends "layout.html" %}
-{% block title %}Uday's Pizza{% endblock %}
-{% block body %}
+{% block title %}Homepage{% endblock %}
+{% block main %}
     <div class="container">
-        <h1>Welcome to Uday's Pizza</h1>
-        <ul>
-            <li><a href={% url 'signup'%}>Sign Up</a></li>
-            <li><a href={% url 'login'%}>Log In</a></li>
-        </ul>
+        <div class="container"><h1 align="center">Welcome to Uday's Pizza</h1></div>
+        <div class="container">
+            {% include "regularpizza.html" %}
+            {% block body1 %}{% endblock %}
+        </div>
+        <div class="container">
+            {% include "sicilianpizza.html" %}
+            {% block body2 %}{% endblock %}
+        </div>
+        <div class="container"><a href="#" class="btn btn-primary btn-submit">Add to cart</a></div>
     </div>
 {% endblock %}

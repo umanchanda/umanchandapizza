@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+{% block body %}
+    <div class="card">
+        <div class="card-body">
+            <h5 class="card-title">Sicilian Pizza</h5>
+            <div class="container">
+                <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col"></th>
+                        <th scope="col">Small</th>
+                        <th scope="col">Large</th>
+                        <th scope="col">Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <th scope="row">Cheese</th>
+                        <td>24.45</td>
+                        <td>38.70</td>
+                        <td>
+                            {% include "addtocart.html" %}
+                            {% block cart1 %}{% endblock %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">One Item</th>
+                        <td>26.45</td>
+                        <td>40.70</td>
+                        <td>
+                            {% include "addtocart.html" %}
+                            {% block cart2 %}{% endblock %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Two Items</th>
+                        <td>28.45</td>
+                        <td>42.70</td>
+                        <td>
+                            {% include "addtocart.html" %}
+                            {% block cart3 %}{% endblock %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Three Items</th>
+                        <td>29.45</td>
+                        <td>44.70</td>
+                        <td>
+                            {% include "addtocart.html" %}
+                            {% block cart4 %}{% endblock %}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th scope="row">Special</th>
+                        <td>30.45</td>
+                        <td>45.70</td>
+                        <td>
+                            {% include "addtocart.html" %}
+                            {% block cart5 %}{% endblock %}
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+{% endblock %}

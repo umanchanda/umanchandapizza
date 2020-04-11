@@ -1,3 +1,5 @@
 # Project 3
 
-Web Programming with Python and JavaScript
+Run project with: `python3 manage.py runserver`
+
+Navigate to: `localhost: 8000` in your browser
